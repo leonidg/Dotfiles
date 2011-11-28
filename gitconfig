@@ -1,0 +1,8 @@
+[user]
+	name = Leonid Grinberg
+	email = leonidg@mit.edu
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
