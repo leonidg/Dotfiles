@@ -1,0 +1,41 @@
+# Nice editing environment
+set edit:maxfillcols 72
+set edit:maxwrapcols 0
+
+# Display date and time
+showdate
+timeformat "%Y-%m-%d %H:%M:%S"
+
+# Set up logging
+set classlogging on
+set logging on
+
+# Make the :decrypt command
+perl do "/mit/nelhage/Public/barnowl-decrypt.pl"
+
+# Don't send pings
+set txping off
+
+# "setsearch" sets the highlighted search-string (in this case to
+#  nothing, turning off the highlighting)
+bindkey recv \ command setsearch
+
+bindkey recv v command start-command vc 
+
+# At some point I really should write a toggle command...
+bindkey recv F command set _followlast on
+bindkey recv f command set _followlast off
+
+# Navigation commands
+bindkey recv HOME command recv:first
+bindkey recv END command recv:last
+bindkey recv j command recv:next
+bindkey recv k command recv:prev
+
+# Sometimes I hit 'A' accidentally, and I don't use the Away feature.
+unbindkey recv A
+
+# Load site-specific configuration options This should really do a
+# safe load (to not error out if the file doesn't exist), but there's
+# no easy way I know of to do that with Barnowl
+source startup_local
