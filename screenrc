@@ -1,0 +1,18 @@
+termcapinfo xterm* ti@:te@ # scrollbar
+
+# visual bell
+vbell off
+vbell_msg "*"
+
+# If a window goes unresponsive, don't block the whole session waiting for it.
+nonblock on
+
+# Change the hardstatus settings to give an window list at the bottom of the
+# screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+defscrollback 100000
+defflow auto
+
+hardstatus string '%{= kG}[%{G}%H%{g}][%{w}%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{w}%D %d %M %Y %c:%s%{-}]'
+
+sorendition = bc
