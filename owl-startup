@@ -38,4 +38,4 @@ unbindkey recv A
 # Load site-specific configuration options This should really do a
 # safe load (to not error out if the file doesn't exist), but there's
 # no easy way I know of to do that with Barnowl
-source startup_local
+source ~/.owl/startup_local
