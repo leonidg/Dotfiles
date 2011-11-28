@@ -1,0 +1,20 @@
+These are some common dotfiles I use. Each references a site-specific
+file (the standard filename followed by a "_local",
+e.g. ".bashrc_local") which you can put in things that only belong on
+some machines. This is a pretty simplistic setup, but I don't
+administer many machines so it works well enough.
+
+Included files:
+---------------
+  * bashrc
+        ~/.bashrc, GNU Bourne Again Shell
+        http://www.gnu.org/software/bash/
+  * screenrc
+        ~/.screenrc, GNU Screen
+        http://www.gnu.org/software/screen/
+  * emacs
+        ~/.emacs, GNU Emacs
+        http://www.gnu.org/software/emacs/
+  * owl-startup
+        ~/.owl/startup, BarnOwl
+        http://barnowl.mit.edu
