@@ -9,7 +9,7 @@ shopt -s checkwinsize
 # [ <red>Date Time</red> <blue>user</blue><yellow>@server</yellow> <green>cwd</green> ] <magenta>jobs</magenta> <green>$</green>
 PS1="[ \[\033[1;31m\]\d \t \[\033[1;34m\]\u\[\033[1;33m\]@\h \[\033[1;32m\]\w \[\033[0m\]] \[\033[1;35m\]\j \[\033[1;32m\]\$ \[\033[0m\]"
 
-export EDITOR="emacs -nw"
+export EDITOR="emacs"
 
 # Colors for ls
 # OS X is stupid and has non-standard options
