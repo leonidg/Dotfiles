@@ -23,6 +23,7 @@ bindkey recv \ command setsearch
 bindkey recv v command start-command vc 
 
 # Requires the Toggle module
+# (https://github.com/leonidg/barnowl/blob/master/Toggle.pm)
 bindkey recv F command toggle _followlast
 
 # Navigation commands
