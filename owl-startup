@@ -22,9 +22,8 @@ bindkey recv \ command setsearch
 
 bindkey recv v command start-command vc 
 
-# At some point I really should write a toggle command...
-bindkey recv F command set _followlast on
-bindkey recv f command set _followlast off
+# Requires the Toggle module
+bindkey recv F command toggle _followlast
 
 # Navigation commands
 bindkey recv HOME command recv:first
