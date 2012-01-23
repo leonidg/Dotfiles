@@ -19,5 +19,5 @@ Included files:
         ~/.owl/startup, BarnOwl
         http://barnowl.mit.edu
   * gitconfig
-        ~/.gitconfig
+        ~/.gitconfig, Git
         http://www.git-scm.com
