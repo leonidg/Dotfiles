@@ -128,6 +128,9 @@ NUMBER of times supplied by 'remainder'"
 (global-set-key [M-up] 'windmove-up)
 (global-set-key [M-down] 'windmove-down)
 
+(global-set-key "#" 'comment-region)
+(global-set-key "\\" 'uncomment-region)
+
 ;; Enable generic mode
 ;; Useful for a lot of common filetypes
 (require 'generic-x)
