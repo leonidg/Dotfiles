@@ -1,35 +1,3 @@
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(LaTeX-command "pdflatex")
- '(TeX-output-view-style (quote (("^dvi$" ("^landscape$" "^pstricks$\\|^pst-\\|^psfrag$") "%(o?)dvips -t landscape %d -o && gv %f") ("^dvi$" "^pstricks$\\|^pst-\\|^psfrag$" "%(o?)dvips %d -o && gv %f") ("^dvi$" ("^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "^landscape$") "%(o?)xdvi %dS -paper a4r -s 0 %d") ("^dvi$" "^a4\\(?:dutch\\|paper\\|wide\\)\\|sem-a4$" "%(o?)xdvi %dS -paper a4 %d") ("^dvi$" ("^a5\\(?:comb\\|paper\\)$" "^landscape$") "%(o?)xdvi %dS -paper a5r -s 0 %d") ("^dvi$" "^a5\\(?:comb\\|paper\\)$" "%(o?)xdvi %dS -paper a5 %d") ("^dvi$" "^b5paper$" "%(o?)xdvi %dS -paper b5 %d") ("^dvi$" "^letterpaper$" "%(o?)xdvi %dS -paper us %d") ("^dvi$" "^legalpaper$" "%(o?)xdvi %dS -paper legal %d") ("^dvi$" "^executivepaper$" "%(o?)xdvi %dS -paper 7.25x10.5in %d") ("^dvi$" "." "%(o?)xdvi %dS %d") ("^pdf$" "." "okular %o") ("^html?$" "." "firefox %o"))))
- '(TeX-style-path (quote ("style" "auto" "/usr/share/emacs/site-lisp/auctex/style" "/var/auctex" "/home/hahafaha/latex")))
- '(c++-mode-hook (quote ((lambda nil (c-set-style "bsd")) (lambda nil (setq c-basic-offset 4)))))
- '(c-default-style (quote ((java-mode . "java") (other . "gnu"))))
- '(c-mode-hook (quote ((lambda nil (c-set-style "bsd")) (lambda nil (setq c-basic-offset 4)))))
- '(c-offsets-alist (quote ((inline-open . 4))))
- '(case-fold-search t)
- '(column-number-mode t)
- '(default-input-method "latin-1-prefix")
- '(global-font-lock-mode t nil (font-lock))
- '(inhibit-startup-screen t)
- '(java-mode-hook (quote ((lambda nil (c-set-style "bsd")) (lambda nil (setq c-basic-offset 4)))))
- '(load-home-init-file t t)
- '(mouse-wheel-mode t nil (mwheel))
- '(scroll-bar-mode (quote right))
- '(show-paren-mode t)
- '(tab-width 8)
- '(transient-mark-mode t)
- '(x-select-enable-clipboard t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
-
 
 ;; Enable multiple minibuffers
 (setq minibuffer-max-depth nil)
@@ -47,6 +15,11 @@
 
 ;; Don't indent tabs
 (setq-default indent-tabs-mode nil) 
+
+;; Make default C-like style nice
+(setq c-default-style
+      '((other . "k&r")))
+(setq c-basic-offset 4)
 
 ;; Match parens
 (show-paren-mode t) 
