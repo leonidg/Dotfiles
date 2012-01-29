@@ -37,7 +37,7 @@
 ;; Highlight region between mark and pointer
 (transient-mark-mode 1)
 
-;; Shortcut to disable word count
+;; Shortcut to display word count
 (defun word-count nil "Count words in buffer" (interactive)
   (shell-command-on-region (point-min) (point-max) "wc -w"))
 (global-set-key "" 'word-count)
@@ -84,6 +84,7 @@ NUMBER of times supplied by 'remainder'"
 
 (global-set-key "=" 'wide-underline)
 (global-set-key "-" 'narrow-underline)
+
 
 ;; Navigation shortcuts
 ;; This is actually pretty non-portable and should detect the
