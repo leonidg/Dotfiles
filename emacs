@@ -1,3 +1,5 @@
+;; Don't show startup screen
+(setq inhibit-splash-screen t)
 
 ;; Enable multiple minibuffers
 (setq minibuffer-max-depth nil)
