@@ -23,6 +23,9 @@
       '((other . "k&r")))
 (setq c-basic-offset 4)
 
+;; Show comments as red
+(set-face-foreground 'font-lock-comment-face "red")
+
 ;; Match parens
 (show-paren-mode t) 
 
