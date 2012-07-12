@@ -130,5 +130,8 @@ NUMBER of times supplied by 'remainder'"
 ;; Useful for a lot of common filetypes
 (require 'generic-x)
 
+;; Disable alarms
+(setq ring-bell-function 'ignore)
+
 ;; Load site-specific configuration options
 (load "~/.emacs_local" t)
