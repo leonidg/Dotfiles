@@ -10,6 +10,12 @@
 ;; Don't make the stupid file~ backup files
 (setq make-backup-files nil) 
 
+;; Use K&R
+(setq c-default-style
+      '((other . "k&r")))
+(setq indent-tabs-mode nil) ;; use spaces instead of tabs
+(setq c-basic-offset 4) ;; set 4-space indentation as default
+
 ;; Various mode hooks
 (setq auto-mode-alist  (cons '(".rhtml$" . html-mode) auto-mode-alist))
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
@@ -18,11 +24,11 @@
                                 (setq c-basic-offset 4
                                       tab-width 4
                                       indent-tabs-mode nil)))
-;; Use K&R
-(setq c-default-style
-      '((other . "k&r")))
-(setq indent-tabs-mode nil) ;; use spaces instead of tabs
-(setq c-basic-offset 4) ;; set 4-space indentation as default
+
+(add-hook 'c-mode-hook (lambda ()
+			 (setq c-basic-offset 4
+			       tab-width 4
+			       indent-tabs-mode nil)))
 
 ;; Show comments as red
 (set-face-foreground 'font-lock-comment-face "red")
