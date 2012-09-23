@@ -14,30 +14,15 @@
 (setq auto-mode-alist  (cons '(".rhtml$" . html-mode) auto-mode-alist))
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.htacces\\'" . apache-conf-generic-mode))
-
-;; We all know 4-space indents is Correct in C, but unfortunately,
-;; some files are written by non-believers. These are some convenience
-;; functions to switch back and forth.
-(defun spaces-indentation-with-offset (offset)
-  (setq indent-tabs-mode nil)
-  (setq c-basic-offset offset))
-(spaces-indentation-with-offset 4) ;; set 4-space indentation as default
-(defun spaces-mode4 ()
-  (interactive)
-  (spaces-indentation-with-offset 4))
-(defun tabs-indentation-with-offset (offset)
-  (setq indent-tabs-mode t)
-  (setq c-basic-offset offset))
-(defun tabs-mode4 ()
-  (interactive)
-  (tabs-indentation-with-offset 4))
-(defun tabs-mode8 ()
-  (interactive)
-  (tabs-indentation-with-offset 8))
-
+(add-hook 'java-mode-hook (lambda ()
+                                (setq c-basic-offset 4
+                                      tab-width 4
+                                      indent-tabs-mode nil)))
 ;; Use K&R
 (setq c-default-style
       '((other . "k&r")))
+(setq indent-tabs-mode nil) ;; use spaces instead of tabs
+(setq c-basic-offset 4) ;; set 4-space indentation as default
 
 ;; Show comments as red
 (set-face-foreground 'font-lock-comment-face "red")
