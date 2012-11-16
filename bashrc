@@ -18,6 +18,7 @@ if [[ `uname` == "Darwin" ]]; then
 else
     alias ls='ls --color=auto'
 fi
+alias grep='grep --color=auto'
 
 # Prevents Ctrl-s from turning off echo
 stty stop undef
