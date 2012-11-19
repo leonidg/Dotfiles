@@ -20,9 +20,5 @@ else
 fi
 alias grep='grep --color=auto'
 
-# Prevents Ctrl-s from turning off echo
-stty stop undef
-stty start undef
-
 # Load site-specific configuration options
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local
