@@ -20,5 +20,11 @@ else
 fi
 alias grep='grep --color=auto'
 
+function mdless() {
+    # h/o http://blog.metamatt.com/blog/2013/01/09/previewing-markdown-files-from-the-terminal/
+    filename=$1
+    pandoc -s -f markdown -t man "$filename" | groff -T utf8 -man | less
+}
+
 # Load site-specific configuration options
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local
