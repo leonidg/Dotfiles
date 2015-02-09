@@ -13,7 +13,7 @@
 ;; Use K&R
 (setq c-default-style
       '((other . "k&r")))
-(setq indent-tabs-mode nil) ;; use spaces instead of tabs
+(setq-default indent-tabs-mode nil) ;; use spaces instead of tabs
 (setq c-basic-offset 4) ;; set 4-space indentation as default
 
 ;; Various mode hooks
