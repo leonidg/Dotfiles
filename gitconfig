@@ -1,11 +1,9 @@
 [user]
 	name = Leonid Grinberg
-	email = leonidg@mit.edu
+	email = lgrinberg@gmail.com
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-	grep = auto
+	ui = auto
 [alias]
 	graph-log = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+[merge]
+	conflictstyle = diff3
