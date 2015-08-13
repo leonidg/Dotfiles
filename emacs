@@ -124,5 +124,10 @@ NUMBER of times supplied by 'remainder'"
 ;; Disable alarms
 (setq ring-bell-function 'ignore)
 
+;; set this in all c-based programming modes
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (c-set-offset 'case-label '+)))
+
 ;; Load site-specific configuration options
 (load "~/.emacs_local" t)
