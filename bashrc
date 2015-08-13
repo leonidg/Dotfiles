@@ -26,5 +26,11 @@ function mdless() {
     pandoc -s -f markdown -t man "$filename" | groff -T utf8 -man | less
 }
 
+# If a command starts with a space it won't get saved to history
+export HISTCONTROL=ignorespace
+
+# Diff two directories with corresponding files (meaning /foo/a is checked against /bar/a, and so on)
+alias diff-dir='diff -ENwbur'
+
 # Load site-specific configuration options
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local
