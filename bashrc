@@ -45,12 +45,11 @@ if [[ `uname` == "Darwin" ]]; then
     fi
 fi
 
-
-# Load site-specific configuration options
-[ -e ~/.bashrc_local ] && source ~/.bashrc_local
-
 export NVM_DIR="/Users/leonidg/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Pretty-print JSON (use as pipe, e.g., curl [JSON endpoint] | ppjson)
 alias ppjson="python -m json.tool"
+
+# Load site-specific configuration options
+[ -e ~/.bashrc_local ] && source ~/.bashrc_local
