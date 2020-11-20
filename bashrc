@@ -18,7 +18,8 @@ if [[ `uname` == "Darwin" ]]; then
 else
     alias ls='ls --color=auto'
 fi
-alias grep='grep --color=auto'
+alias grep='grep --color=always'
+alias less='less -R'
 
 function mdless() {
     # h/o http://blog.metamatt.com/blog/2013/01/09/previewing-markdown-files-from-the-terminal/
