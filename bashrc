@@ -52,5 +52,8 @@ export NVM_DIR="/Users/leonidg/.nvm"
 # Pretty-print JSON (use as pipe, e.g., curl [JSON endpoint] | ppjson)
 alias ppjson="python -m json.tool"
 
+alias fmtssn="sed -E 's/([0-9]{3})([0-9]{2})([0-9]{4})/\1-\2-\3/'"
+alias fmtcc="sed -E 's/([0-9]{4})([0-9]{4})([0-9]{4})([0-9]{4})/\1 \2 \3\ \4/'"
+
 # Load site-specific configuration options
 [ -e ~/.bashrc_local ] && source ~/.bashrc_local
